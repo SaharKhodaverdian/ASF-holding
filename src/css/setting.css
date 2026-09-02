@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color:#303144;
+  background-color:#e8deec
 }
 .main-wrapper {
   width: 100%;
@@ -16,4 +16,14 @@ body {
 }
 :root {
   --font-family: Yekan;
+}
+
+:root {
+  --bg-header: rgba(255, 255, 255, 0.85);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent-color: #000000;
+  --border-color: rgba(226, 232, 240, 0.8);
+  --header-height: 76px;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
