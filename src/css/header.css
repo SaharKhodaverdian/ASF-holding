@@ -1,6 +1,4 @@
-
-
-/* ساختار کلی هدر */
+/*هدر*/
 .site-header {
   position: fixed;
   top: 0;
@@ -12,7 +10,7 @@
   transition: var(--transition);
 }
 
-/* وضعیت هدر هنگام اسکرول به پایین */
+/*اسکرول به پایین هدر*/
 .site-header.is-scrolled {
   background: var(--bg-header);
   backdrop-filter: blur(12px);
@@ -36,13 +34,13 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--text-main);
+  color: var(--accent-color);
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
 }
 
-/* ناوبری دسکتاپ */
+/* نویگیشن دسکتاپ */
 .primary-nav {
   display: flex;
   align-items: center;
@@ -60,7 +58,7 @@
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--bg-header);
   font-size: 0.95rem;
   font-weight: 500;
   transition: var(--transition);
@@ -72,14 +70,14 @@
   color: var(--text-main);
 }
 
-/* افکت خط زیر لینک مینیمال */
+/* افکت خط زیر لینک */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
-  height: 1.5px;
+  height: 1px;
   background-color: var(--accent-color);
   transition: var(--transition);
 }
@@ -95,7 +93,7 @@
   padding: 0.6rem 1.4rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #fff;
+  color: #e8e8e8;
   background-color: var(--accent-color);
   border-radius: 999px;
   text-decoration: none;
@@ -107,7 +105,15 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* دکمه همبرگری (مخفی در دسکتاپ) */
+/*عکس هیرو*/
+.base-image-hero img{
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* دکمه همبرگری موبایل */
+
 .nav-toggle {
   display: none;
   background: none;
