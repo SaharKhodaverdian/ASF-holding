@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--bg-header);
+  background-color: var(--color-bg);
   /*background-image: radial-gradient(
     ellipse at -100% 100%,
     var(--text-main) 0%,
@@ -16,22 +16,70 @@ body {
 .main-wrapper {
   width: 100%;
   height: 100%;
-  font-family: var(--font-family);
-}
-@font-face {
-  font-family: Yekan;
-  src: url(../fonts/iranyekanwebregular.e31c09af.woff2);
-}
-:root {
-  --font-family: Yekan;
 }
 
-:root {
-  --bg-header: #e8e8e8;
-  --text-main: #185976;
-  --text-muted: #999999;
-  --accent-color: #3a3a3a;
-  --border-color: #757575;
-  --header-height: 76px;
-  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+/*فونت ها*/
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../fonts/Vazirmatn-VariableFont_wght.ttf) format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf) format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-024F, U+2000-206F,
+                 U+20A0-20BF, U+2100-214F, U+2190-21BB;
+}
+
+
+:root {
+  --font-base: "Inter", "Vazirmatn", system-ui, sans-serif;
+  --font-fa: "Vazirmatn", sans-serif;
+  --font-en: "Inter", sans-serif;
+}
+
+html {
+  font-family: var(--font-base);
+  font-synthesis-weight: none;
+}
+
+body {
+  direction: rtl;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/*پالت*/
+
+:root {
+  --color-bg: #e8e8e8; /*سطح اصلی*/
+  --blue-main: #185976; /*آبی سازمانی*/
+  --black-main: #0f0f10;
+  --darkgray-main: #3a3a3a; /*توسی تیره سازمانی*/
+  --lightgray-main: #757575; /*توسی روشن سازمانی*/  
+
+  
+  /* Accent — طلایی گرم */
+  --color-accent: #c9a84c; /* CTA، هایلایت */
+  --color-accent-dim: #8c6e2e; /* hover state */
+
+  /* Semantic */
+  --color-success: #4caf7d;
+  --color-error: #e05a5a;
+
+  /*متفرقه*/
+  --header-height: 75px; /*ارتفاع هدر*/
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); /*ترنزیشن اصلی*/
+}
+

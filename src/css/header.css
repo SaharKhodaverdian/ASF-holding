@@ -12,10 +12,10 @@
 
 /*اسکرول به پایین هدر*/
 .site-header.is-scrolled {
-  background: var(--bg-header);
+  background: var(--color-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--lightgray-main);
 }
 
 .header-container {
@@ -34,7 +34,7 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--darkgray-main);
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
@@ -58,7 +58,7 @@
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--darkgray-main);
   font-size: 0.95rem;
   font-weight: 500;
   transition: var(--transition);
@@ -67,7 +67,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--accent-color);
+  color: var(--darkgray-main);
 }
 
 /* افکت خط زیر لینک */
@@ -78,7 +78,7 @@
   right: 0;
   width: 0;
   height: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--darkgray-main);
   transition: var(--transition);
 }
 
@@ -90,19 +90,19 @@
 /* دکمه اکشن */
 .btn-minimal {
   display: inline-block;
-  padding: 0.6rem 1.4rem;
+  padding: 5px 1.4rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  color: var(--darkgray-main);
+  border: 1px solid var(--darkgray-main);
   border-radius: 999px;
   text-decoration: none;
   transition: var(--transition);
 }
 
 .btn-minimal:hover {
-  background-color: var(--accent-color);
-  color: var(--bg-header);
+  background-color: var(--darkgray-main);
+  color: var(--color-bg);
 
 }
 
@@ -138,7 +138,7 @@
 .hamburger-line {
   width: 24px;
   height: 2px;
-  background-color: var(--text-main);
+  background-color: var(--blue-main);
   transition: var(--transition);
 }
 
