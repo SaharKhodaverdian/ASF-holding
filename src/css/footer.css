@@ -1,0 +1,168 @@
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  background-color: var(--color-bg);
+  color: var(--darkgray-main);
+  border-top: 1px solid var(--lightgray-main);
+  margin-top: 8rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 2rem;
+}
+
+/* بخش اصلی */
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-bottom: 5rem;
+}
+
+/* برند */
+
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-logo {
+  display: inline-block;
+  color: var(--darkgray-main);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-description {
+  margin: 0;
+  max-width: 320px;
+  color: var(--gray-main);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+/* ستون لینک‌ها */
+
+.footer-links {
+  display: flex;
+  gap: 7rem;
+}
+
+.footer-column {
+  min-width: 130px;
+}
+
+.footer-column h3 {
+  margin: 0 0 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-main);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+  position: relative;
+  color: var(--darkgray-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-column a:hover {
+  opacity: 0.6;
+}
+
+/* نوار پایین */
+
+.footer-bottom {
+  border-top: 1px solid var(--lightgray-main);
+
+  padding-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--gray-main);
+  font-size: 0.8rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: var(--darkgray-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  opacity: 0.6;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    margin-top: 5rem;
+  }
+
+  .footer-container {
+    padding: 3.5rem 1.5rem 1.5rem;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    gap: 3rem;
+  }
+
+  .footer-column {
+    min-width: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-socials {
+    gap: 1.25rem;
+  }
+}

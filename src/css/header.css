@@ -106,23 +106,6 @@
 
 }
 
-/*عکس هیرو*/
-
-.base-image-hero {
-
-  
-  /* position: relative;
-  width: 100%;
-  height: 100vh; 
-  background-image: url("../images/header/image-4.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column; */
-}
-
 /* دکمه همبرگری موبایل */
 
 .nav-toggle {
@@ -138,7 +121,7 @@
 .hamburger-line {
   width: 24px;
   height: 2px;
-  background-color: var(--blue-main);
+  background-color: var(--darkgray-main);
   transition: var(--transition);
 }
 
@@ -183,5 +166,8 @@
 
   .nav-link {
     font-size: 1.25rem;
+  }
+  .nav-cta {
+    display: none;
   }
 }
