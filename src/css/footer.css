@@ -1,31 +1,27 @@
-
-/* =========================
-   Footer
-========================= */
+/* Footer */
 
 .site-footer {
   background-color: var(--color-bg);
   color: var(--darkgray-main);
-  border-top: 1px solid var(--lightgray-main);
+  border-top: 1px solid var(--lightgray50-main);
   margin-top: 8rem;
 }
 
 .footer-container {
-  max-width: 1280px;
+  max-width: 1340px;
   margin: 0 auto;
-  padding: 5rem 2rem 2rem;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
-/* بخش اصلی */
-
 .footer-main {
+  max-width: 1340px;
   display: flex;
   justify-content: space-between;
   gap: 6rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
-
-/* برند */
 
 .footer-brand {
   max-width: 360px;
@@ -49,11 +45,9 @@
   line-height: 2;
 }
 
-/* ستون لینک‌ها */
-
 .footer-links {
   display: flex;
-  gap: 7rem;
+  gap: 1rem;
 }
 
 .footer-column {
@@ -89,43 +83,23 @@
   opacity: 0.6;
 }
 
-/* نوار پایین */
-
 .footer-bottom {
-  border-top: 1px solid var(--lightgray-main);
-
-  padding-top: 1.5rem;
-
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: center;
   color: var(--gray-main);
   font-size: 0.8rem;
 }
-
-.footer-socials {
-  display: flex;
-  gap: 1.5rem;
+.groupsad-wrapper {
+  width: 100%;
+  height: 90px;
 }
-
-.footer-socials a {
-  color: var(--darkgray-main);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer-socials a:hover {
-  opacity: 0.6;
-}
-
 
 /* =========================
    Mobile
 ========================= */
 
 @media (max-width: 768px) {
-
   .site-footer {
     margin-top: 5rem;
   }

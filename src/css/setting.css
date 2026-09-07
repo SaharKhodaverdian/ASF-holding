@@ -3,15 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--color-bg);
-  /*background-image: radial-gradient(
-    ellipse at -100% 100%,
-    var(--text-main) 0%,
-    var(--text-main) 35%,
-    transparent 90%
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;*/
+
 }
 .main-wrapper {
   max-width: 1280px;
@@ -36,10 +28,9 @@ body {
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0100-024F, U+2000-206F,
-                 U+20A0-20BF, U+2100-214F, U+2190-21BB;
+  unicode-range:
+    U+0000-00FF, U+0100-024F, U+2000-206F, U+20A0-20BF, U+2100-214F, U+2190-21BB;
 }
-
 
 :root {
   --font-base: "Inter", "Vazirmatn", system-ui, sans-serif;
@@ -59,9 +50,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
-
-
 /*پالت*/
 
 :root {
@@ -69,9 +57,9 @@ body {
   --blue-main: #185976; /*آبی سازمانی*/
   --black-main: #0f0f10;
   --darkgray-main: #3a3a3a; /*توسی تیره سازمانی*/
-  --lightgray-main: #757575; /*توسی روشن سازمانی*/  
+  --lightgray-main: #757575; /*توسی روشن سازمانی*/
+  --lightgray50-main: #75757550; /*توسی روشن سازمانی اوپسیتی 50*/
 
-  
   /* Accent — طلایی گرم */
   --color-accent: #c9a84c; /* CTA، هایلایت */
   --color-accent-dim: #8c6e2e; /* hover state */
@@ -81,7 +69,18 @@ body {
   --color-error: #e05a5a;
 
   /*متفرقه*/
-  --header-height: 75px; /*ارتفاع هدر*/
+  --header-height: 70px; /*ارتفاع هدر*/
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); /*ترنزیشن اصلی*/
 }
 
+/*swiper setting*/
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
