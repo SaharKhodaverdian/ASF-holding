@@ -1,21 +1,24 @@
-/*هدر*/
+/*header*/
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background: transparent;
   z-index: 1000;
   transition: var(--transition);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.026);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/*اسکرول به پایین هدر*/
 .site-header.is-scrolled {
   background: var(--color-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--lightgray-main);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .header-container {
@@ -28,7 +31,7 @@
   justify-content: space-between;
 }
 
-/* لوگو */
+/* logo */
 .brand-logo {
   display: flex;
   align-items: center;
@@ -40,7 +43,7 @@
   letter-spacing: -0.02em;
 }
 
-/* نویگیشن دسکتاپ */
+/* desktop navigation */
 .primary-nav {
   display: flex;
   align-items: center;
@@ -62,7 +65,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   transition: var(--transition);
-  padding: 0.25rem 0;
+  padding: 0.30rem 0;
 }
 
 .nav-link:hover,
@@ -70,7 +73,7 @@
   color: var(--darkgray-main);
 }
 
-/* افکت خط زیر لینک */
+/* underline effect */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -87,24 +90,45 @@
   width: 100%;
 }
 
-/* دکمه اکشن */
-.btn-minimal {
-  display: inline-block;
-  padding: 5px 1.4rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--darkgray-main);
-  border: 1px solid var(--darkgray-main);
-  border-radius: 999px;
-  text-decoration: none;
+/* languages */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+.lang-list li {
+  justify-content: center ;
+  align-items: center;
+  height: 22px;
+}
+
+.lang-link {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.6;
   transition: var(--transition);
 }
 
-.btn-minimal:hover {
-  background-color: var(--darkgray-main);
-  color: var(--color-bg);
-
+.lang-link:hover,
+.lang-link.active {
+  opacity: 1;
 }
+
+.flag-icon {
+  width: 22px;
+  display: block;  
+}
+
+
 
 /* دکمه همبرگری موبایل */
 

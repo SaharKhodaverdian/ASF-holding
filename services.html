@@ -9,54 +9,100 @@
   <body>
     <!--Start-->
     <div class="main-wrapper">
-      <div class="navbar">
-        <picture class="base-image-hero"> </picture>
-        <header class="site-header" id="siteHeader">
-          <div class="header-container">
-            <!-- لوگو -->
-            <a href="#" class="brand-logo" aria-label="صفحه اصلی شرکت">
-              <span class="logo-text">هلدینگ آتین سازگان فرداد </span>
-            </a>
-            <!-- دکمه ناوبری موبایل (همبرگری) -->
-            <button
-              class="nav-toggle"
-              id="navToggle"
-              aria-expanded="false"
-              aria-controls="primaryNav"
-              aria-label="باز و بستن منو"
-            >
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-            </button>
+      <header class="site-header" id="siteHeader">
+        <div class="header-container">
+          <!-- logo -->
+          <a href="./index.html" class="brand-logo" aria-label="صفحه اصلی شرکت">
+            <span class="logo-text">هلدینگ آتین سازگان فرداد </span>
+          </a>
 
-            <!-- لینک‌های ناوبری -->
-            <nav class="primary-nav" id="primaryNav">
-              <ul class="nav-list">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link">خانه</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./services.html" class="nav-link active">خدمات</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./projects.html" class="nav-link">پروژه‌ها</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./about.html" class="nav-link">درباره ما</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./contacts.html" class="nav-link">تماس با ما</a>
-                </li>
-              </ul>
-            </nav>
+          <!-- mobile hamburger -->
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="primaryNav"
+            aria-label="باز و بستن منو"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
 
-            <!-- کال تو اکشن هدر -->
-            <div class="nav-cta">
-              <a href="#contact" class="btn-minimal">مشاوره</a>
-            </div>
-          </div>
-        </header>
-      </div>
+          <!-- navigation links -->
+          <nav class="primary-nav" id="primaryNav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">خانه</a>
+              </li>
+              <li class="nav-item">
+                <a href="./services.html" class="nav-link">خدمات</a>
+              </li>
+              <li class="nav-item">
+                <a href="./projects.html" class="nav-link">پروژه‌ها</a>
+              </li>
+              <li class="nav-item">
+                <a href="./about.html" class="nav-link">درباره ما</a>
+              </li>
+              <li class="nav-item">
+                <a href="./contacts.html" class="nav-link">تماس با ما</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--languages-->
+          <nav class="language-switcher" aria-label="انتخاب زبان">
+            <ul class="lang-list">
+              <li>
+                <a
+                  href="/en"
+                  class="lang-link"
+                  lang="en"
+                  hreflang="en"
+                  title="English"
+                >
+                  <img
+                    src="./src/images/header/svg/flag-for-flag-united-kingdom-svgrepo-com.svg"
+                    alt="English"
+                    class="flag-icon"
+                  />
+                </a>
+              </li>
+            
+              <li>
+                <a
+                  href="/ar"
+                  class="lang-link"
+                  lang="ar"
+                  hreflang="ar"
+                  title="العربية"
+                >
+                  <img
+                    src="./src/images/header/svg/flag-for-flag-united-arab-emirates-svgrepo-com.svg"
+                    alt="العربية"
+                    class="flag-icon"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/fa"
+                  class="lang-link active"
+                  lang="fa"
+                  hreflang="fa"
+                  title="فارسی"
+                >
+                  <img
+                    src="./src/images/header/svg/flag-for-flag-iran-svgrepo-com.svg"
+                    alt="فارسی"
+                    class="flag-icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <div class="hero-wrapper"></div>
     </div>
     <!--end of the project-->

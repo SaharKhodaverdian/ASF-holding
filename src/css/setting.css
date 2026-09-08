@@ -44,6 +44,7 @@ html {
 }
 
 body {
+  margin-top: 100px;
   direction: rtl;
   font-weight: 400;
   line-height: 1.75;
