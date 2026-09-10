@@ -1,32 +1,30 @@
 /* Footer */
 
 .site-footer {
-  max-width: 1280px; 
-  margin: 8rem auto 2rem; 
-  padding: 0 2rem; 
+  max-width: 1280px;
+  margin: 8rem auto 2rem;
+  padding: 0 2rem;
   max-height: 350px;
   background-color: rgba(232, 232, 232, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px; 
-  border: 1px solid rgba(255, 255, 255, 0.25); 
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); 
-  color: var(--darkgray-main)
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  color: var(--darkgray-main);
 }
 
-
 .footer-container {
-  padding: 3rem 0; 
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
 }
 
-
 .footer-main {
   max-width: 1340px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 6rem;
   padding-bottom: 2rem;
 }
 
@@ -54,31 +52,58 @@
 
 .footer-links {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.footer-column {
+.footer-row {
+  display: flex;
+  flex-direction: row;
   min-width: 130px;
+  gap: 40px;
+  .platforms {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+    height: 28px;
+    width: 28px;
+  }
+  }
+}
+.platforms:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+
+.footer-row:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  min-width: 130px;
+  gap: 20px;
 }
 
-.footer-column h3 {
-  margin: 0 0 1.5rem;
+.footer-row h3 {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--gray-main);
+  margin: 0;
 }
 
-.footer-column ul {
+.footer-row ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
 
-.footer-column li {
-  margin-bottom: 0.8rem;
-}
 
-.footer-column a {
+
+.footer-row a {
   position: relative;
   color: var(--darkgray-main);
   text-decoration: none;
@@ -86,7 +111,7 @@
   transition: var(--transition);
 }
 
-.footer-column a:hover {
+.footer-row a:hover {
   opacity: 0.6;
 }
 
@@ -109,7 +134,7 @@
 @media (max-width: 768px) {
   .site-footer {
     max-width: 90%;
-    margin: 5rem auto 1.5rem; 
+    margin: 5rem auto 1.5rem;
     padding: 0 1.5rem;
   }
 
@@ -117,11 +142,9 @@
     padding: 2.5rem 0rem 1.5rem;
   }
 
-
   .footer-main {
     flex-direction: column;
     gap: 3.5rem;
     padding-bottom: 3rem;
   }
-  
 }

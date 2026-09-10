@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/main.css" />
-    
 
     <title>ASF holding</title>
   </head>
@@ -17,18 +16,6 @@
           <a href="./index.html" class="brand-logo" aria-label="صفحه اصلی شرکت">
             <span class="logo-text">هلدینگ آتین سازگان فرداد </span>
           </a>
-
-          <!-- mobile hamburger -->
-          <button
-            class="nav-toggle"
-            id="navToggle"
-            aria-expanded="false"
-            aria-controls="primaryNav"
-            aria-label="باز و بستن منو"
-          >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
 
           <!-- navigation links -->
           <nav class="primary-nav" id="primaryNav">
@@ -73,10 +60,6 @@
               <li>
                 <a
                   href="/ar"
-              
-              <li>
-                <a
-                  href="/ar"
                   class="lang-link"
                   lang="ar"
                   hreflang="ar"
@@ -110,34 +93,31 @@
         </div>
       </header>
       <div class="hero-wrapper">
-        <div class="gallery-wrap">
-          <div class="gallery gallery--bento gallery--switch" id="gallery-8">
-            <div class="gallery__item">
-              <img src="./src/images/header/IMG_4442.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/image-2.JPG" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/image-3.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/IMG_0202.jpg" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/DSC_2555.JPG" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/DSC_2408 - Copy.JPG" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/image-433.JPG" alt="" />
-            </div>
-            <div class="gallery__item">
-              <img src="./src/images/header/20220829_12388352.jpg" alt="" />
+        <section class="slider-section">
+          <div class="slider-container">
+            <div class="slider-track">
+              <div class="slide">
+                <img src="./src/images/slide-1.jpg" alt="" />
+              </div>
+
+              <div class="slide">
+                <img src="./src/images/slide-2.jpg" alt="" />
+              </div>
+
+              <div class="slide">
+                <img src="./src/images/slide-3.jpg" alt="" />
+              </div>
+
+              <div class="slide">
+                <img src="./src/images/slide-4.jpg" alt="" />
+              </div>
+
+              <div class="slide">
+                <img src="./src/images/slide-5.jpg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
       <div class="trustbar-wrapper"></div>
       <div class="service-wrapper"></div>
@@ -157,9 +137,7 @@
             </div>
 
             <div class="footer-links">
-              <div class="footer-column">
-                <h3>دسترسی سریع</h3>
-
+              <div class="footer-row">
                 <ul>
                   <li><a href="./index.html">خانه</a></li>
                   <li><a href="./services.html">خدمات</a></li>
@@ -168,17 +146,31 @@
                 </ul>
               </div>
 
-              <div class="footer-column">
-                <h3>ارتباط با ما</h3>
-
-                <ul>
-                  <li><a href="./contacts.html">تماس با ما</a></li>
-                  <li><a href="tel:+982100000000">۰۲۱-۰۰۰۰۰۰۰۰</a></li>
-                  <li>
-                    <a href="mailto:info@example.com"> info@example.com </a>
-                  </li>
-                  <li><a href="./contacts.html">واتس‌اپ</a></li>
-                </ul>
+              <div class="footer-row">
+                <div class="platforms">
+                  <img
+                    src="./src/images/platforms/facebook-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="platforms">
+                  <img
+                    src="./src/images/platforms/gmail-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="platforms">
+                  <img
+                    src="./src/images/platforms/telegram-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="platforms">
+                  <img
+                    src="./src/images/platforms/whatsapp-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -188,21 +180,13 @@
               سازگان فرداد محفوظ است.
             </span>
           </div>
-
-          <div class="groupsad-wrapper">
-            <div class="group"></div>
-            <div class="group"></div>
-            <div class="group"></div>
-          </div>
         </div>
       </footer>
     </div>
     <!--end of the project-->
 
     <!--scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
-
-    <script src="main.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
