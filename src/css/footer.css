@@ -2,13 +2,14 @@
 
 .site-footer {
   max-width: 1280px;
-  margin: 8rem auto 2rem;
+  margin: 8rem auto 0rem;
   padding: 0 2rem;
   max-height: 350px;
   background-color: rgba(232, 232, 232, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   color: var(--darkgray-main);
@@ -67,8 +68,8 @@
     display: flex;
     justify-content: center;
     img{
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
   }
   }
 }

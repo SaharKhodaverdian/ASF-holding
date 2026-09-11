@@ -1,7 +1,7 @@
 /*header*/
 .site-header {
   position: fixed;
-  top: 1.5rem; 
+  top: 0; 
   left: 50%; 
   transform: translateX(-50%); 
   width: 1250px;
@@ -12,7 +12,8 @@
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
-  border-radius: 15px;
+  border-end-end-radius: 15px;
+  border-end-start-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.25); 
 }
 
