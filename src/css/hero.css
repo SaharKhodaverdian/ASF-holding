@@ -1,54 +1,103 @@
 .slider-section {
   width: 100%;
+  height: 250px;
   overflow: hidden;
   padding: 40px 0;
+  padding-top: 0;
 }
 
-.slider-container {
+.mySwiper {
   width: 100%;
   overflow: hidden;
 }
 
-.slider-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  direction: ltr;
-
-  transform: translateX(0);
-  transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-
-  will-change: transform;
+.mySwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
-.slide {
-  flex: 0 0 calc((100vw - 48px) / 2.5);
+.mySwiper .swiper-slide {
+  flex-shrink: 0;
   width: calc((100vw - 48px) / 2.5);
   aspect-ratio: 768 / 384.7;
   overflow: hidden;
 }
 
-.slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
 @media (max-width: 900px) {
-  .slide {
-    flex-basis: calc((100vw - 24px) / 1.5);
+  .mySwiper .swiper-slide {
     width: calc((100vw - 24px) / 1.5);
   }
 }
 
 @media (max-width: 600px) {
-  .slider-track {
-    gap: 16px;
-  }
-
-  .slide {
-    flex-basis: calc((100vw - 16px) / 1.2);
+  .mySwiper .swiper-slide {
     width: calc((100vw - 16px) / 1.2);
   }
+}
+
+/*second slider*/
+
+.second-slider-section {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.secondSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.secondSwiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.secondSwiper .second-slide {
+  flex-shrink: 0;
+  width: calc((100vw - 48px) / 2.5);
+  aspect-ratio: 768 / 384.7;
+  overflow: hidden;
+}
+
+.secondSwiper .second-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .secondSwiper .second-slide {
+    width: calc((100vw - 24px) / 1.5);
+  }
+}
+
+@media (max-width: 600px) {
+  .secondSwiper .second-slide {
+    width: calc((100vw - 16px) / 1.2);
+  }
+}
+
+
+.mySwiper .swiper-slide img,
+.secondSwiper .swiper-slide img {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.mySwiper .swiper-slide:hover img,
+.secondSwiper .swiper-slide:hover img {
+  filter: grayscale(0%);
 }

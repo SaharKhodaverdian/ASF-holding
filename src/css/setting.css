@@ -70,7 +70,7 @@ body {
   --color-error: #e05a5a;
 
   /*متفرقه*/
-  --header-height: 60px; /*ارتفاع هدر*/
+  --header-height: 65px; /*ارتفاع هدر*/
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); /*ترنزیشن اصلی*/
 }
 

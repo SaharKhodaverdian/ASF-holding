@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/main.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>ASF holding</title>
   </head>
   <body>
@@ -94,27 +97,53 @@
       </header>
       <div class="hero-wrapper">
         <section class="slider-section">
-          <div class="slider-container">
-            <div class="slider-track">
-              <div class="slide">
-                <img src="./src/images/slide-1.jpg" alt="" />
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/images/header/20260618_092453_1.jpg" alt="" />
               </div>
 
-              <div class="slide">
-                <img src="./src/images/slide-2.jpg" alt="" />
+              <div class="swiper-slide">
+                <img src="./src/images/header/20260618_092453_1.jpg" alt="" />
               </div>
 
-              <div class="slide">
-                <img src="./src/images/slide-3.jpg" alt="" />
+              <div class="swiper-slide">
+                <img src="./src/images/header/20260618_092453_1.jpg" alt="" />
               </div>
 
-              <div class="slide">
-                <img src="./src/images/slide-4.jpg" alt="" />
+              <div class="swiper-slide">
+                <img src="./src/images/header/20260618_092453_1.jpg" alt="" />
               </div>
 
-              <div class="slide">
-                <img src="./src/images/slide-5.jpg" alt="" />
+              <div class="swiper-slide">
+                <img src="./src/images/header/20260618_092453_1.jpg" alt="" />
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="second-slider-section">
+          <div class="swiper secondSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide second-slide">
+                <img src="./src/images/header/DSC_2403 - Copy.JPG" alt="" />
+              </div>
+
+              <div class="swiper-slide second-slide">
+                <img src="./src/images/header/DSC_2403 - Copy.JPG" alt="" />
+              </div>
+
+              <div class="swiper-slide second-slide">
+                <img src="./src/images/header/DSC_2403 - Copy.JPG" alt="" />
+              </div>
+
+              <div class="swiper-slide second-slide">
+                <img src="./src/images/header/DSC_2403 - Copy.JPG" alt="" />
+              </div>
+
+              <div class="swiper-slide second-slide">
+                <img src="./src/images/header/DSC_2403 - Copy.JPG" alt="" />
+              </div>
+              
             </div>
           </div>
         </section>
@@ -161,6 +190,12 @@
                 </div>
                 <div class="platforms">
                   <img
+                    src="./src/images/platforms/instagram-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="platforms">
+                  <img
                     src="./src/images/platforms/telegram-svgrepo-com.svg"
                     alt=""
                   />
@@ -186,7 +221,7 @@
     <!--end of the project-->
 
     <!--scripts-->
-
-    <script src="./src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./src/js/heroswiper.js"></script>
   </body>
 </html>
