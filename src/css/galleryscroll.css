@@ -1,4 +1,7 @@
-p {
+/* desktop */
+
+@media (min-width: 1200px) {
+  p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -82,4 +85,12 @@ p {
 
 .section {
   padding: 2rem 5rem;
+}
+  
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
 }

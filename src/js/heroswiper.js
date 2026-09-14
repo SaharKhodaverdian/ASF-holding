@@ -1,73 +1,158 @@
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 24,
+document.addEventListener("DOMContentLoaded", () => {
 
-  loop: false,
+  const isHomePage =
+    window.location.pathname.endsWith("/") ||
+    window.location.pathname.endsWith("/index.html");
 
-  speed: 9000,
+  if (!isHomePage) {
+    return;
+  }
 
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
+  document.body.classList.add("home-page");
 
-  allowTouchMove: false,
-});
 
-swiper.on("reachEnd", function () {
-  swiper.autoplay.stop();
+  const firstSwiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    loop: false,
+    allowTouchMove: false,
+    speed: 0,
+  });
 
-  swiper.params.autoplay.reverseDirection = true;
 
-  setTimeout(() => {
-    swiper.autoplay.start();
-  }, 500);
-});
+  const secondSwiper = new Swiper(".secondSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    loop: false,
+    allowTouchMove: false,
+    speed: 0,
+  });
 
-swiper.on("reachBeginning", function () {
-  swiper.autoplay.stop();
+  const FIRST_SPEED = 0.035;
+  const SECOND_SPEED = 0.035;
 
-  swiper.params.autoplay.reverseDirection = false;
+  const WHEEL_FORCE = 0.025;
 
-  setTimeout(() => {
-    swiper.autoplay.start();
-  }, 500);
-});
+  const MAX_WHEEL_SPEED = 0.18;
 
-// second slider
+  const ACCELERATION = 0.08;
 
-const secondSwiper = new Swiper(".secondSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 24,
+  const DECELERATION = 0.035;
 
-  loop: false,
+  let firstVelocity = FIRST_SPEED;
+  let secondVelocity = SECOND_SPEED;
 
-  speed: 7000,
+  let firstTargetVelocity = FIRST_SPEED;
+  let secondTargetVelocity = SECOND_SPEED;
 
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
+  let firstDirection = -1;
+  let secondDirection = 1;
 
-  allowTouchMove: false,
-});
 
-secondSwiper.on("reachEnd", function () {
-  secondSwiper.autoplay.stop();
+  function moveFirstSlider(distance) {
+    const min = firstSwiper.maxTranslate();
+    const max = firstSwiper.minTranslate();
 
-  secondSwiper.params.autoplay.reverseDirection = true;
+    let current = firstSwiper.getTranslate();
 
-  setTimeout(() => {
-    secondSwiper.autoplay.start();
-  }, 500);
-});
+    current += firstDirection * distance;
 
-secondSwiper.on("reachBeginning", function () {
-  secondSwiper.autoplay.stop();
+    // انتهای چپ
+    if (current <= min) {
+      current = min;
+      firstDirection = 1;
+    }
 
-  secondSwiper.params.autoplay.reverseDirection = false;
+    // انتهای راست
+    if (current >= max) {
+      current = max;
+      firstDirection = -1;
+    }
 
-  setTimeout(() => {
-    secondSwiper.autoplay.start();
-  }, 500);
+    firstSwiper.setTranslate(current);
+  }
+
+
+  function moveSecondSlider(distance) {
+    const min = secondSwiper.maxTranslate();
+    const max = secondSwiper.minTranslate();
+
+    let current = secondSwiper.getTranslate();
+
+    current += secondDirection * distance;
+
+    if (current <= min) {
+      current = min;
+      secondDirection = 1;
+    }
+
+    if (current >= max) {
+      current = max;
+      secondDirection = -1;
+    }
+
+    secondSwiper.setTranslate(current);
+  }
+
+  let lastTime = performance.now();
+
+  function animate(time) {
+    const delta = time - lastTime;
+
+    lastTime = time;
+
+    firstVelocity += (firstTargetVelocity - firstVelocity) * ACCELERATION;
+
+    secondVelocity += (secondTargetVelocity - secondVelocity) * ACCELERATION;
+
+    moveFirstSlider(firstVelocity * delta);
+
+    moveSecondSlider(secondVelocity * delta);
+
+    requestAnimationFrame(animate);
+  }
+
+
+  let wheelTimeout;
+
+  window.addEventListener(
+    "wheel",
+    (event) => {
+      event.preventDefault();
+
+      const delta = event.deltaY;
+
+
+      if (delta > 0) {
+        firstDirection = -1;
+        secondDirection = 1;
+      } else if (delta < 0) {
+        firstDirection = 1;
+        secondDirection = -1;
+      }
+
+
+      const wheelSpeed = Math.min(
+        Math.abs(delta) * WHEEL_FORCE,
+        MAX_WHEEL_SPEED,
+      );
+
+      firstTargetVelocity = FIRST_SPEED + wheelSpeed;
+
+      secondTargetVelocity = SECOND_SPEED + wheelSpeed;
+
+
+      clearTimeout(wheelTimeout);
+
+      wheelTimeout = setTimeout(() => {
+        firstTargetVelocity = FIRST_SPEED;
+        secondTargetVelocity = SECOND_SPEED;
+      }, 180);
+    },
+    {
+      passive: false,
+    },
+  );
+
+  requestAnimationFrame(animate);
 });

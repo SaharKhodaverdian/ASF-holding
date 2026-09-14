@@ -5,6 +5,16 @@ body {
   background-color: var(--color-bg);
 
 }
+.home-page {
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
 .main-wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -62,8 +72,8 @@ body {
   --lightgray50-main: #75757550; /*توسی روشن سازمانی اوپسیتی 50*/
 
   /* Accent — طلایی گرم */
-  --color-accent: #c9a84c; /* CTA، هایلایت */
-  --color-accent-dim: #8c6e2e; /* hover state */
+  --color-accent: #c9a84c;
+  --color-accent-dim: #8c6e2e; 
 
   /* Semantic */
   --color-success: #4caf7d;

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./src/css/main.css" />
     <title>ASF Shops</title>
   </head>
-  <body>
+  <body class="home-page">
     <!--Start-->
     <div class="main-wrapper">
       <header class="site-header" id="siteHeader">
@@ -15,18 +15,6 @@
           <a href="./index.html" class="brand-logo" aria-label="صفحه اصلی شرکت">
             <span class="logo-text">هلدینگ آتین سازگان فرداد </span>
           </a>
-
-          <!-- mobile hamburger -->
-          <button
-            class="nav-toggle"
-            id="navToggle"
-            aria-expanded="false"
-            aria-controls="primaryNav"
-            aria-label="باز و بستن منو"
-          >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
 
           <!-- navigation links -->
           <nav class="primary-nav" id="primaryNav">
@@ -54,33 +42,24 @@
             <ul class="lang-list">
               <li>
                 <a
-                  href="/en"
-                  class="lang-link"
-                  lang="en"
-                  hreflang="en"
-                  title="English"
-                >
-                  <img
-                    src="./src/images/header/svg/flag-for-flag-united-kingdom-svgrepo-com.svg"
-                    alt="English"
-                    class="flag-icon"
-                  />
-                </a>
-              </li>
-
-              <li>
-                <a
                   href="/ar"
                   class="lang-link"
                   lang="ar"
                   hreflang="ar"
                   title="العربية"
                 >
-                  <img
-                    src="./src/images/header/svg/flag-for-flag-united-arab-emirates-svgrepo-com.svg"
-                    alt="العربية"
-                    class="flag-icon"
-                  />
+                  <span class="lang-text">AR</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/en"
+                  class="lang-link"
+                  lang="en"
+                  hreflang="en"
+                  title="English"
+                >
+                  <span class="lang-text">EN</span>
                 </a>
               </li>
 
@@ -92,11 +71,7 @@
                   hreflang="fa"
                   title="فارسی"
                 >
-                  <img
-                    src="./src/images/header/svg/flag-for-flag-iran-svgrepo-com.svg"
-                    alt="فارسی"
-                    class="flag-icon"
-                  />
+                  <span class="lang-text">FA</span>
                 </a>
               </li>
             </ul>
