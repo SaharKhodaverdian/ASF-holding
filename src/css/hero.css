@@ -1,4 +1,4 @@
-/* desktop */
+/* large desktop */
 @media (min-width: 1200px) {
   /* first slider */
   .hero-wrapper {
@@ -8,7 +8,7 @@
   }
   .slider-section {
     width: 100%;
-    height: 350px;
+    height: 35%;
     overflow: hidden;
     margin-bottom: 40px 0;
   }
@@ -40,7 +40,7 @@
 
   .second-slider-section {
     width: 100%;
-    height: 350px;
+    height: 35%;
     overflow: hidden;
     padding: 40px 0;
   }
@@ -79,6 +79,8 @@
     filter: grayscale(0%);
   }
 }
+
+
 
 /* mobile */
 @media (max-width: 768px) {
